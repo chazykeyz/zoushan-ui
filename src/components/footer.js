@@ -13,7 +13,7 @@ const Footer = () => {
             target="_blank"
             className="tertiary"
           >
-            The Loft Central Down Town Dubai
+            Dubai
           </a>
           <a href="tel:+255789950505" className="tertiary">
             (+255) 789 950 505

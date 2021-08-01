@@ -37,7 +37,7 @@ const Home = () => {
     dots: false,
     infinite: true,
     autoplay: true,
-    speed: 500,
+    speed: 10000,
     fade: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -60,7 +60,7 @@ const Home = () => {
         <Slider {...settings}>
           {data.map((item) => (
             <div className="relative" key={item.id}>
-              <div className="w-screen " style={{ height: "80vh" }}>
+              <div className="w-screen h-screen">
                 <img
                   src={item.thumbnail}
                   alt=""
@@ -79,7 +79,7 @@ const Home = () => {
                   <div className="h-10" />
                   <NavLink
                     to="/shop"
-                    className="px-4 py-3 my-2 rounded-full primaryBg App "
+                    className="px-4 py-3 tertiary my-2 rounded-full primaryBg App "
                   >
                     SHOP NOW
                   </NavLink>
