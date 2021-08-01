@@ -1,4 +1,5 @@
-const Host = "http://127.0.0.1:8000/";
+// const Host = "http://127.0.0.1:8000/";
+const Host = "https://zoushancosmetics.herokuapp.com/";
 
 const MainRoot = `${Host}api/`;
 

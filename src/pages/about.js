@@ -5,13 +5,7 @@ const About = () => {
   return (
     <div className="grid grid-cols-12 pt-20">
       <div className=" col-span-10 col-start-2 flex items-center mt-10  md:items-start flex-col mb-4">
-        <div className="text-3xl font-bold tertiary "> ABOUT US</div>
-        <div
-          className="secondaryBg  w-20 mt-2   "
-          style={{
-            height: 2,
-          }}
-        />
+        <div className="text-3xl font-black tertiary "> ABOUT US</div>
       </div>
       <div className="col-span-10 col-start-2 flex felx-wrap grid grid-cols-1 md:grid-cols-2 items-center">
         <div align="justify">
@@ -29,7 +23,7 @@ const About = () => {
         </div>
         <div className="md:pl-8 " style={{ height: 500 }}>
           <img
-            src="https://images.pexels.com/photos/7704220/pexels-photo-7704220.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            src="https://1.bp.blogspot.com/-EMM1imKQW70/YQaQKLkye7I/AAAAAAAABYg/W0y1y1filA0sYyhBB5AvCDXMptFkJdWHwCLcBGAsYHQ/s16000/ZC-57.jpg"
             alt=""
             className="h-full w-full object-cover rounded-xl "
           />
@@ -47,7 +41,7 @@ const About = () => {
         <div className="shd h-80 rounded-3xl flex flex-col items-center justify-center overflow-hidden">
           <img
             className="h-full w-full object-cover"
-            src="https://images.pexels.com/photos/8647814/pexels-photo-8647814.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            src="https://1.bp.blogspot.com/-wAL7BH-HAPA/YQaVIHWANbI/AAAAAAAABZI/RCrZcIzEHGADEdrwjGmlSV3JQPY9Xp3RQCLcBGAsYHQ/s16000/ZC-27.jpg"
             alt=""
           />
         </div>
@@ -61,11 +55,11 @@ const About = () => {
         <div className="shd h-80 rounded-3xl flex flex-col items-center justify-center overflow-hidden">
           <img
             className="h-full w-full object-cover"
-            src="https://images.pexels.com/photos/8647814/pexels-photo-8647814.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            src="https://1.bp.blogspot.com/-OKwMfFS72G8/YQaVjDjCYhI/AAAAAAAABZQ/ZFkPPzl9eiwSMI4FJYOp9B1Eu0ArYfrGwCLcBGAsYHQ/s16000/ZC-79.jpg"
             alt=""
           />
         </div>
-        <div className="shd h-80 rounded-3xl flex flex-col items-center justify-center">
+        <div className="shd h-80 rounded-3xl flex flex-col items-center justify-center p-6">
           <div className="font-bold text-3xl secondary">WHAT WE BELIEVE IN</div>
           <div>
             We believe in preserving nature and also harnesing its pure cosmetic
@@ -78,38 +72,7 @@ const About = () => {
         <div className="shd h-80 rounded-3xl flex flex-col items-center justify-center overflow-hidden">
           <img
             className="h-full w-full object-cover"
-            src="https://images.pexels.com/photos/8647814/pexels-photo-8647814.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-            alt=""
-          />
-        </div>
-      </div>
-      <div className=" col-span-12 flex  items-center flex-col">
-        <div className="text-xl"> OUR COMMUNITY</div>
-        <div
-          className="secondaryBg  w-20 mt-2   "
-          style={{
-            height: 1,
-          }}
-        />
-      </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 col-span-10 col-start-2 my-10 ">
-        <div className="shd h-80 rounded-3xl flex flex-col items-center justify-center overflow-hidden">
-          <img
-            className="h-full w-full object-cover"
-            src="https://images.pexels.com/photos/8647814/pexels-photo-8647814.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-            alt=""
-          />
-        </div>
-        <div className="shd h-80 rounded-3xl flex flex-col items-center justify-center">
-          <div>
-            Our community partners during different processes of product
-            productiond.
-          </div>
-        </div>
-        <div className="shd h-80 rounded-3xl flex flex-col items-center justify-center overflow-hidden">
-          <img
-            className="h-full w-full object-cover"
-            src="https://images.pexels.com/photos/8647814/pexels-photo-8647814.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            src="https://1.bp.blogspot.com/-zH0F8wBVXpI/YQaWFtBTC6I/AAAAAAAABZY/iuIRA-4yr-YHZK_qM1PNdINV-C79M4QagCLcBGAsYHQ/s16000/ZC-67.jpg"
             alt=""
           />
         </div>

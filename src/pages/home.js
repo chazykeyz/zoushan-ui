@@ -37,6 +37,7 @@ const Home = () => {
     infinite: true,
     autoplay: true,
     speed: 500,
+    fade: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
@@ -90,6 +91,10 @@ const Home = () => {
       <div className="py-10">
         <ProductSlide data={product} />
       </div>
+
+      <div className="primaryBgb py-8">
+        <About />
+      </div>
       <div className="grid grid-cols-12 my-10">
         <div className=" col-span-12 flex  items-center flex-col mb-4">
           <div className="text-xl"> OUR CORE VALUES</div>
@@ -116,12 +121,9 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="primaryBgb py-8">
-        <About />
-      </div>
-      <div>
+      {/* <div>
         <TestimonySlide />
-      </div>
+      </div> */}
     </div>
   );
 };

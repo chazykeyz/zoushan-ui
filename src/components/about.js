@@ -36,7 +36,7 @@ const About = () => {
         </div>
         <div className="md:pl-8 " style={{ height: 500 }}>
           <img
-            src="https://images.pexels.com/photos/7704220/pexels-photo-7704220.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            src="https://1.bp.blogspot.com/-lQiQ63r4FuI/YQaMu_VoyQI/AAAAAAAABYY/KyY_wLPAMjohLvZas3C8ZQ9R0jgCefjXwCLcBGAsYHQ/s16000/ZC-97.jpg"
             alt=""
             className="h-full w-full object-cover rounded-xl "
           />

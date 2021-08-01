@@ -15,28 +15,28 @@ const ProductSlide = ({ data, cartItems, addToCart }) => {
     arrows: false,
     autoplay: true,
     speed: 500,
+    dots: false,
     autoplaySpeed: 3000,
     slidesToShow: 5,
     slidesToScroll: 1,
     initialSlide: 0,
-    dots: true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 4,
+          dots: false,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 3,
+          dots: false,
           slidesToScroll: 1,
           initialSlide: 2,
-          dots: false,
         },
       },
       {
@@ -65,7 +65,7 @@ const ProductSlide = ({ data, cartItems, addToCart }) => {
       <Slider {...settings} className="col-span-10 col-start-2 my-4 py-4">
         {data.map((item) => (
           <div key={item.id}>
-            <div className="rounded-xl primaryBg shadow-lg  m-2 overflow-hidden">
+            <div className="rounded-xl primaryBg shd  m-2 overflow-hidden">
               <img
                 src={item.thumbnail}
                 alt={item.name}
@@ -74,7 +74,10 @@ const ProductSlide = ({ data, cartItems, addToCart }) => {
 
               <div className="px-4 pb-2  flex justify-between items-center mt-2">
                 <div className="flex flex-col items-start">
-                  <NavLink to={`/product/${item.name}`} className="text-xl">
+                  <NavLink
+                    to={`/product/${item.name}`}
+                    className="text-xl tertiary font-black"
+                  >
                     {item.name}
                   </NavLink>
                   <small className=" secondary">{item.category.category}</small>
