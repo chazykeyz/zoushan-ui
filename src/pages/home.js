@@ -16,6 +16,7 @@ import About from "../components/about";
 
 import axios from "axios";
 import { slideAPI, productsAPI } from "./../constant";
+import Footer from "../components/footer";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -124,6 +125,8 @@ const Home = () => {
       {/* <div>
         <TestimonySlide />
       </div> */}
+
+      <Footer />
     </div>
   );
 };

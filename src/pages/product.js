@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import axios from "axios";
 import { productsAPI } from "./../constant";
+import cart from "../cart.svg";
 // react redux import for connecting redux
 import { connect } from "react-redux";
 // redux action import
@@ -11,6 +12,7 @@ import {
   decreaseFromCart,
   clearCart,
 } from "./../reduxStore/actions/cart";
+import { addToCart } from "./../reduxStore/actions/cart";
 import { Ordering } from "./../reduxStore/actions/order";
 
 const Product = (props) => {
@@ -34,7 +36,9 @@ const Product = (props) => {
           <div className="flex flex-col justify-center items-start md:ml-10">
             <div className="text-2xl font-bold">{item.name}</div>
             <small className="secondary">{item.category.category}</small>
-            <div>{item.description}</div>
+            <div align="justify" className="mr-4">
+              {item.description}
+            </div>
           </div>
           <div>
             <img
@@ -53,52 +57,14 @@ const Product = (props) => {
               {item.volume && <div className="secondary">{item.volume} ml</div>}
             </div>
             <div className="flex flex-col mx-4 text-red-700">
-              <div className="secondary text-xl">Quantity</div>
-              {props.cartItems.map((item) => (
-                <div className="flex items-center my-2">
-                  <div
-                    onClick={(e) =>
-                      props.decreaseFromCart(props.cartItems, item)
-                    }
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M15 19l-7-7 7-7"
-                      />
-                    </svg>
-                  </div>
-                  <div className="h-10 w-10 flex mx-3 justify-center items-center rounded-full  tertiaryBg text-white">
-                    {item.quantity}
-                  </div>
-                  <div
-                    onClick={(e) => props.removeFromCart(props.cartItems, item)}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              ))}
+              <div
+                onClick={(e) => {
+                  addToCart(props.cartItems, item);
+                }}
+                className="h-14 w-14 rounded-full cursor-pointer secondaryBg primary shd flex items-center justify-center"
+              >
+                <img src={cart} alt="" className="h-6" />
+              </div>
             </div>
           </div>
         </div>
@@ -116,4 +82,5 @@ export default connect(mapStateToProps, {
   decreaseFromCart,
   clearCart,
   Ordering,
+  addToCart,
 })(Product);

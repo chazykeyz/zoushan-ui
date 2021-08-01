@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // own compoents import
 import Home from "./pages/home";
 import NavBar from "./components/navBar";
-import Footer from "./components/footer";
 import Shop from "./pages/shop";
 import Checkout from "./pages/checkout";
 import About from "./pages/about";
@@ -55,7 +54,6 @@ function App() {
           <Route path="/adress" component={CheckOutComponet} />
           <Route path="/ordering-report" exact component={ThanksComponent} />
         </Switch>
-        <Footer />
       </Router>
     </div>
   );

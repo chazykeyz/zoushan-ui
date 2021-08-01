@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Footer from "../components/footer";
 
 const About = () => {
   return (
@@ -76,6 +77,9 @@ const About = () => {
             alt=""
           />
         </div>
+      </div>
+      <div className="col-span-12">
+        <Footer />
       </div>
     </div>
   );
