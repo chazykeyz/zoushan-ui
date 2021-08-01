@@ -74,10 +74,7 @@ const ProductSlide = ({ data, cartItems, addToCart }) => {
 
               <div className="px-4 pb-2  flex justify-between items-center mt-2">
                 <div className="flex flex-col items-start">
-                  <NavLink
-                    to={`/product/${item.name}`}
-                    className="text-xl tertiary font-black"
-                  >
+                  <NavLink to={`/product/${item.name}`} className=" tertiary ">
                     {item.name}
                   </NavLink>
                   <small className=" secondary">{item.category.category}</small>
