@@ -14,6 +14,7 @@ import {
 } from "./../reduxStore/actions/cart";
 import { addToCart } from "./../reduxStore/actions/cart";
 import { Ordering } from "./../reduxStore/actions/order";
+import ProductSlide from "../components/productSlide";
 
 const Product = (props) => {
   const [product, setProduct] = useState([]);
