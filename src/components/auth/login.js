@@ -61,7 +61,7 @@ const Login = ({ SignIn, is_authenticated, loginError, setRedirect, setOpenRegis
 
     SignIn(username, password).then(() => {
       setLoading(false);
-      setRedirect(true)
+      setRedirect(false)
     });
   };
 
