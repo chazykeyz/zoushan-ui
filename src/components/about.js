@@ -19,13 +19,13 @@ const About = () => {
             Zoushan Cosmetics is a 100% organic plant based skin care brand
             founded on the foundational ethics of bringing you premium quality
             skincare products, sustainably sourced from the beautiful and rich
-            fbjksasbfjebwj f san vof the Tanzanian landscape. We empower the
-            communities we work with through job creation and giving back a
-            portion of the profits for community development and to top it off,
-            all our packaging is made from recycled materials playing our part
-            in reducing harm done to the enviroment
+            of the Tanzanian landscape. We empower the communities we work with
+            through job creation and giving back a portion of the profits for
+            community development and to top it off, all our packaging is made
+            from recycled materials playing our part in reducing harm done to
+            the enviroment
           </div>
-          <div className="mt-10 flex justify-start">
+          <div className="my-10 flex justify-start">
             <NavLink
               to="/about"
               className=" secondaryBg tertiary font-bold px-4 py-3 rounded-2xl shd"

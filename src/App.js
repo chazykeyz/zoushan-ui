@@ -10,7 +10,7 @@ import About from "./pages/about";
 import ShopCategory from "./pages/shopCategory";
 
 // auth
-import Register from "./components/auth/register";
+import PayPal from "./components/paypal";
 import Logout from "./components/logout";
 import PasswordReset from "./components/auth/resetPassword";
 import PasswordResetConfirm from "./components/auth/resetPasswordConfirm";
@@ -33,7 +33,6 @@ function App() {
   return (
     <div className="App ">
       <Router>
-       
         <Switch>
           {/* auth */}
           <Route path="/logout" exact component={Logout} />
@@ -51,7 +50,8 @@ function App() {
           <Route path="/about" exact component={About} />
           <Route path="/adress" component={CheckOutComponet} />
           <Route path="/ordering-report" exact component={ThanksComponent} />
-           <Route path="/orders" exact component={Admin} />
+          <Route path="/orders" exact component={Admin} />
+          <Route path="/paypal" exact component={PayPal} />
         </Switch>
       </Router>
     </div>

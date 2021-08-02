@@ -10,7 +10,7 @@ import { addToCart } from "./../reduxStore/actions/cart";
 import cart from "../cart.svg";
 import { NavLink } from "react-router-dom";
 
-const ProductSlide = ({ data, cartItems, addToCart }) => {
+const ProductSlide = ({ data, cartItems, addToCart, name }) => {
   const settings = {
     arrows: false,
     autoplay: true,
@@ -54,7 +54,10 @@ const ProductSlide = ({ data, cartItems, addToCart }) => {
   return (
     <div className="grid grid-cols-12 flex flex-col">
       <div className=" col-span-12 flex  items-center flex-col">
-        <div className="text-xl"> PRE-ORDER OUR RANGE</div>
+        <div className="text-xl">
+          {" "}
+          {name ? "RELATED PRODUCTS" : "PRE-ORDER OUR RANGE"}
+        </div>
         <div
           className="secondaryBg  w-20 mt-2   "
           style={{
@@ -62,37 +65,83 @@ const ProductSlide = ({ data, cartItems, addToCart }) => {
           }}
         />
       </div>
-      <Slider {...settings} className="col-span-10 col-start-2 my-4 py-4">
-        {data.map((item) => (
-          <div key={item.id}>
-            <div className="rounded-xl primaryBg shd  m-2 overflow-hidden">
-              <img
-                src={item.thumbnail}
-                alt={item.name}
-                className="h-60 w-full object-cover"
-              />
+      {name ? (
+        <Slider {...settings} className="col-span-10 col-start-2 my-4 py-4">
+          {data
+            .filter((item) => item.name !== name)
+            .map((item) => (
+              <div key={item.id}>
+                <div className="rounded-xl primaryBg shd  m-2 overflow-hidden">
+                  <img
+                    src={item.thumbnail}
+                    alt={item.name}
+                    className="h-60 w-full object-cover"
+                  />
 
-              <div className="px-4 pb-2  flex justify-between items-center mt-2">
-                <div className="flex flex-col items-start">
-                  <NavLink to={`/product/${item.name}`} className=" tertiary ">
-                    {item.name}
-                  </NavLink>
-                  <small className=" secondary">{item.category.category}</small>
-                  <div className="">${item.price}</div>
+                  <div className="px-4 pb-2  flex justify-between items-center mt-2">
+                    <div className="flex flex-col items-start">
+                      <NavLink
+                        to={`/product/${item.name}`}
+                        className=" tertiary "
+                      >
+                        {item.name}
+                      </NavLink>
+                      <small className=" secondary">
+                        {item.category.category}
+                      </small>
+                      <div className="">${item.price}</div>
+                    </div>
+                    <div
+                      onClick={(e) => {
+                        addToCart(cartItems, item);
+                      }}
+                      className="h-14 w-14 rounded-full cursor-pointer secondaryBg primary shd flex items-center justify-center"
+                    >
+                      <img src={cart} alt="" className="h-6" />
+                    </div>
+                  </div>
                 </div>
-                <div
-                  onClick={(e) => {
-                    addToCart(cartItems, item);
-                  }}
-                  className="h-14 w-14 rounded-full cursor-pointer secondaryBg primary shd flex items-center justify-center"
-                >
-                  <img src={cart} alt="" className="h-6" />
+              </div>
+            ))}
+        </Slider>
+      ) : (
+        <Slider {...settings} className="col-span-10 col-start-2 my-4 py-4">
+          {data.map((item) => (
+            <div key={item.id}>
+              <div className="rounded-xl primaryBg shd  m-2 overflow-hidden">
+                <img
+                  src={item.thumbnail}
+                  alt={item.name}
+                  className="h-60 w-full object-cover"
+                />
+
+                <div className="px-4 pb-2  flex justify-between items-center mt-2">
+                  <div className="flex flex-col items-start">
+                    <NavLink
+                      to={`/product/${item.name}`}
+                      className=" tertiary "
+                    >
+                      {item.name}
+                    </NavLink>
+                    <small className=" secondary">
+                      {item.category.category}
+                    </small>
+                    <div className="">${item.price}</div>
+                  </div>
+                  <div
+                    onClick={(e) => {
+                      addToCart(cartItems, item);
+                    }}
+                    className="h-14 w-14 rounded-full cursor-pointer secondaryBg primary shd flex items-center justify-center"
+                  >
+                    <img src={cart} alt="" className="h-6" />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </Slider>
+      )}
     </div>
   );
 };

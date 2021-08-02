@@ -22,8 +22,8 @@ const Shop = () => {
     dataFetch();
   }, []);
   return (
-    <div className="grid grid-cols-12 ">
-    <NavBar home={false}/>
+    <div className="grid grid-cols-12 pb-20 ">
+      <NavBar home={false} />
       <div className=" col-span-10 col-start-2 flex items-center mt-10  md:items-start flex-col mb-4">
         <div className="text-3xl font-bold tertiary "> SHOP OUR RANGE </div>
         <div
@@ -33,13 +33,13 @@ const Shop = () => {
           }}
         />
       </div>
-      <div className="col-span-10 col-start-2">
-        <div className="flex flex-wrap">
+      <div className="col-span-10 col-start-2 ">
+        <div className=" flex-wrap hidden md:flex">
           {category.map((item) => (
             <NavLink
               key={item.id}
               to={`/shop/${item.category}`}
-              className="px-4 py-2 m-4 shd primary secondaryBg rounded-2xl"
+              className="px-4 py-2 mx-4 my-1 shd primary secondaryBg rounded-2xl"
               activeClassName="tertiaryBg primary"
             >
               {item.category}

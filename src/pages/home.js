@@ -57,7 +57,7 @@ const Home = () => {
   };
   return (
     <div>
-     <NavBar home={true}/>
+      <NavBar home={true} />
       <div>
         <Slider {...settings}>
           {data.map((item) => (
@@ -91,7 +91,7 @@ const Home = () => {
           ))}
         </Slider>
       </div>
-      <div className="py-10">
+      <div className="py-10 ">
         <ProductSlide data={product} />
       </div>
 

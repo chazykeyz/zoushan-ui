@@ -5,7 +5,7 @@ import logo from "../logo.svg";
 const Footer = () => {
   return (
     <div className="grid grid-cols-12 primaryBgb py-8 ">
-      <div className="flex justify-between col-span-10 col-start-2  ">
+      <div className="flex justify-between col-span-10 col-start-2 flex-wrap ">
         <div className="flex flex-col items-start">
           <div className="text-2xl font-bold primary">CONTACT US</div>
           <a

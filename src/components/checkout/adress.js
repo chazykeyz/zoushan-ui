@@ -50,7 +50,7 @@ const Adress = ({ Ordered, adressSuccess, final, cartItems }) => {
   return (
     <div className="w-full p-4 ">
       {final ? (
-        <div className="flex flex-col  items-center mt-10">
+        <div className="flex flex-col col-md-5  items-center mt-10">
           <div className="text-3xl tertiary">Adress</div>
           <form onSubmit={handleSubmit} className="flex flex-col w-full">
             <input
