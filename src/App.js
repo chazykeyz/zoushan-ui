@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // own compoents import
 import Home from "./pages/home";
-import NavBar from "./components/navBar";
+
 import Shop from "./pages/shop";
 import Checkout from "./pages/checkout";
 import About from "./pages/about";
@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="App ">
       <Router>
-        <NavBar />
+       
         <Switch>
           {/* auth */}
           <Route path="/logout" exact component={Logout} />

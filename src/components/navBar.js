@@ -36,7 +36,7 @@ const NavBar = ({ cartItems }) => {
       }}
     >
       <div className="col-start-2 col-span-10  flex justify-between">
-        <NavLink to="/">
+        <NavLink to="/" >
           <img src={logo} className="h-20" alt="logo" />
         </NavLink>
         <div className=" justify-between items-center hidden md:flex">

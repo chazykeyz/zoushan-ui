@@ -75,17 +75,18 @@ const Register = ({ Registration, is_authenticated, setRedirect, setOpenRegister
     }
 
     // user checking
-    if (users.filter((item) => item.brandName.username === username)) {
+    if (users.filter((item) => item.username === username)) {
       setUserCheck(true);
     }
 
     // email checking
-    if (users.filter((item) => item.brandName.email === email)) {
+    if (users.filter((item) => item.email === email)) {
       setEmailCheck(true);
     }
 
     Registration(email, username, password, re_password).then(() => {
       setLoading(false);
+      setOpenRegister(false);
     });
   };
 

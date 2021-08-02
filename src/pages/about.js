@@ -1,10 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Footer from "../components/footer";
+import NavBar from "../components/navBar";
 
 const About = () => {
   return (
-    <div className="grid grid-cols-12 pt-20">
+    <div className="grid grid-cols-12 ">
+    <NavBar home={false}/>
       <div className=" col-span-10 col-start-2 flex items-center mt-10  md:items-start flex-col mb-4">
         <div className="text-3xl font-black tertiary "> ABOUT US</div>
       </div>

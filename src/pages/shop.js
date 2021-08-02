@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import cart from "../cart.svg";
-
+import NavBar from "../components/navBar";
 import axios from "axios";
 import { productsAPI, categoriesAPI } from "./../constant";
 
@@ -22,7 +22,8 @@ const Shop = () => {
     dataFetch();
   }, []);
   return (
-    <div className="grid grid-cols-12 py-20">
+    <div className="grid grid-cols-12 ">
+    <NavBar home={false}/>
       <div className=" col-span-10 col-start-2 flex items-center mt-10  md:items-start flex-col mb-4">
         <div className="text-3xl font-bold tertiary "> SHOP OUR RANGE </div>
         <div

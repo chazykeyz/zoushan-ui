@@ -16,6 +16,7 @@ import { AiFillDelete } from "react-icons/ai";
 import { RiSearchLine } from "react-icons/ri";
 import axios from "axios";
 import { OrderReadAPI } from "./../constant";
+import NavBar from "../components/navBar";
 
 import { NavLink } from "react-router-dom";
 
@@ -55,32 +56,17 @@ const Admin = () => {
 
   return (
     <div
-      className="pt-40"
+     
       style={{
         width: "98vw",
         overflow: "hidden",
       }}
     >
+    <NavBar home={false}/>
       {/* drpbacks */}
       <div>
 
 
-        {/* contract */}
-  
-
-        {/* permission */}
-        <Backdrop className={classes.backdrop} open={openPermission}>
-ghg
-        </Backdrop>
-        {/* loan */}
-        <Backdrop className={classes.backdrop} open={openLoan}>
-        gfhfg
-        </Backdrop>
-        {/* salary */}
-        <Backdrop className={classes.backdrop} open={openSalary}>
-     gfhgf
-        </Backdrop>
-        {/* delete */}
   
       </div>
 
@@ -105,38 +91,38 @@ ghg
                       scope="col"
                       className="px-6 py-3 text-left text-base font-medium text-gray-500  tracking-wider"
                     >
-                      Title
+                      Order ID
                     </th>
                     <th
                       scope="col"
                       className="px-6 py-3 text-left text-base font-medium text-gray-500  tracking-wider"
                     >
-                      Contract
+                      Address
                     </th>
                     <th
                       scope="col"
                       className="px-6 py-3 text-left text-base font-medium text-gray-500  tracking-wider"
                     >
-                      Permission
+                     Date
                     </th>
 
                     <th
                       scope="col"
                       className="px-6 py-3 text-left text-base font-medium text-gray-500  tracking-wider"
                     >
-                      Loan
+                     Total Price
                     </th>
                     <th
                       scope="col"
                       className="px-6 py-3 text-left text-base font-medium text-gray-500  tracking-wider"
                     >
-                      Salary
+                    Total Products
                     </th>
                     <th
                       scope="col"
                       className="px-6 py-3 text-left text-base font-medium text-gray-500  tracking-wider"
                     >
-                      Action
+                      Products
                     </th>
                   </tr>
                 </thead>
@@ -229,14 +215,14 @@ ghg
     
               <div className="rounded-t-xl bg-white overflow-hidden shadow  my-2 ">
                 <div
-                  className='font-semibold text-white text-xl  pt-10 p-4 bg-purple-400'
+                  className='font-semibold text-white text-xl  pt-10 p-4 bg-green-400'
                 >
             {person.user.username}'s  Products
                  </div>
                 <div className="p-4 h-80 overflow-y-scroll">
                   <div>
                     {person.product.map((item) => (
-                      <div className="flex justify-between">
+                      <div className="flex justify-between my-4 bg-gray-100 py-2 px-4 rounded-xl">
                         <div className="flex items-center ">
                           <div className="cursor-pointer flex-shrink-0 h-14 w-14  rounded-3xl ">
                             <img
@@ -277,12 +263,12 @@ ghg
 
               <div className="flex justify-start mt-3">
                 <div
-                  className="h-10  w-10 rounded-full text-white  bg-purple-500 flex justify-center items-center cursor-pointer"
+                  className="h-16  w-16 rounded-full text-white  bg-green-500 flex justify-center items-center cursor-pointer"
                   onClick={() => {
              setOpenDelete(false)
                   }}
                 >
-                  <AiOutlineClose />
+                  <AiOutlineClose size={20}/>
                 </div>
               </div>
              

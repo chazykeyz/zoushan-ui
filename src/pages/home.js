@@ -17,6 +17,7 @@ import About from "../components/about";
 import axios from "axios";
 import { slideAPI, productsAPI } from "./../constant";
 import Footer from "../components/footer";
+import NavBar from "../components/navBar";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -56,6 +57,7 @@ const Home = () => {
   };
   return (
     <div>
+     <NavBar home={true}/>
       <div>
         <Slider {...settings}>
           {data.map((item) => (
