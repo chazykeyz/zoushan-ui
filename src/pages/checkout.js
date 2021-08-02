@@ -9,9 +9,20 @@ import {
   clearCart,
 } from "./../reduxStore/actions/cart";
 import { Ordering } from "./../reduxStore/actions/order";
-
+import Login from "../components/auth/login";
 import { Redirect } from "react-router-dom";
+import Register from "../components/auth/register";
+import Backdrop from "@material-ui/core/Backdrop";
+import { makeStyles } from "@material-ui/core/styles";
 
+  const useStyles = makeStyles((theme) => ({
+    backdrop: {
+      zIndex: theme.zIndex.drawer + 1,
+      backgroundColor: "rgba(0,0,0,.02)",
+      backdropFilter: "blur(4px)",
+    },
+  }));
+  
 const Checkout = ({
   cartItems,
   removeFromCart,
@@ -23,16 +34,34 @@ const Checkout = ({
 }) => {
   const [sendOrder, setSendOrder] = React.useState(false);
   const [redirect, setRedirect] = React.useState(false);
+    const [openLogin, setOpenLogin] = React.useState(false);
+   const [openRegister, setOpenRegister] = React.useState(false);
+
+  const classes = useStyles();
 
   if (sendOrder) {
     return <Redirect to="/adress" />;
   }
-  if (redirect) {
-    return <Redirect to="auth/login" />;
-  }
+
   const token = localStorage.getItem("token");
+
+
+ 
+
   return (
     <div className="grid grid-cols-12">
+ 
+        <Backdrop className={classes.backdrop} open={redirect}>
+              <div className="col-md-6  col-lg-5 col-xl-3  ">
+               <Login setRedirect={setRedirect} setOpenRegister={setOpenRegister}  />
+              </div>
+         
+        </Backdrop>
+
+
+        <Backdrop className={classes.backdrop} open={openRegister}>
+          <Register setRedirect={setRedirect} setOpenRegister={setOpenRegister} />
+        </Backdrop>
       <div className="lg:col-span-8  col-span-10 col-start-2 lg:col-start-3  mt-28 primaryBgb p-4 rounded-3xl">
         <div className="flex justify-between">
           <div className="flex">
@@ -49,10 +78,10 @@ const Checkout = ({
         {cartItems.length > 0 ? (
           <div>
             {cartItems.map((item) => (
-              <div className="flex grid grid-cols-12 my-2">
+              <div className="flex grid grid-cols-12 my-4 divide-y">
                 <div className=" col-span-12 10 lg:col-span-3 md:col-span-5">
                   <img
-                    src="https://images.pexels.com/photos/5549976/pexels-photo-5549976.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                    src={item.thumbnail}
                     alt=""
                     className="w-full rounded-3xl object-cover h-60  lg:h-68"
                   />

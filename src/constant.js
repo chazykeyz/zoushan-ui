@@ -25,3 +25,4 @@ export const usermeAPI = `${MainRoot}single-user/`;
 export const CartAPI = `${MainRoot}cart/`;
 export const CartReadAPI = `${MainRoot}cart-read/`;
 export const OrderAPI = `${MainRoot}order/`;
+export const OrderReadAPI = `${MainRoot}order-read/`;

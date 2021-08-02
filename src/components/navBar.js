@@ -64,27 +64,18 @@ const NavBar = ({ cartItems }) => {
           >
             ABOUT US
           </NavLink>
-          {!token ? (
+    
             <NavLink
-              to="/auth/login"
-              exact
-              className="mx-10 hover:text-red-400  primary"
-              activeStyle={{ borderBottom: "2px solid #281b11" }}
-            >
-              Log in
-            </NavLink>
-          ) : (
-            <NavLink
-              to="/logout"
+              to="/orders"
               exact
               className="mx-10 hover:text-red-400 tertiaryBg px-4 py-2 rounded-xl  primary"
               onClick={() => {
                 localStorage.clear();
               }}
             >
-              Log Out
+             Orders
             </NavLink>
-          )}
+          
         </div>
         <div className=" justify-between  items-center hidden md:flex ">
           <SiFacebook size={22} className="mx-2 primary" />

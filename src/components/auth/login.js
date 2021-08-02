@@ -11,10 +11,12 @@ import { SignIn } from "../../reduxStore/actions/auth";
 // toastify
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "semantic-ui-css/semantic.min.css";
+
 
 function Copyright() {
   return (
-    <p>
+    <p className="secondary">
       {"Zoushan Cosmetics Copyright © "}
       {new Date().getFullYear()}
       {"."}
@@ -22,7 +24,7 @@ function Copyright() {
   );
 }
 
-const Login = ({ SignIn, is_authenticated, loginError }) => {
+const Login = ({ SignIn, is_authenticated, loginError, setRedirect, setOpenRegister }) => {
   // HOOKS
   // conditional hooks
   const [emptyIgnore, setEmptyIgnore] = React.useState(false);
@@ -59,19 +61,17 @@ const Login = ({ SignIn, is_authenticated, loginError }) => {
 
     SignIn(username, password).then(() => {
       setLoading(false);
+      setRedirect(true)
     });
   };
 
   if (is_authenticated) {
-    return <Redirect to="/" />;
+    return <Redirect to="/checkout" />;
   }
   return (
     <div
       className="col-12 d-flex align-items-starts justify-content-center"
-      style={{
-        height: "100vh",
-        paddingTop: 100,
-      }}
+
     >
       {/* toastify container */}
       <ToastContainer
@@ -87,8 +87,18 @@ const Login = ({ SignIn, is_authenticated, loginError }) => {
       />
       {/* Same as */}
       <ToastContainer />
-      <div className="col-md-6  col-lg-5 col-xl-3 pt-5">
-        <h3>Sign in</h3>
+      <div className="col-12" >
+      <div className="flex justify-between">    
+      <h3>Sign in</h3>
+        <div onClick={()=>{
+              setRedirect(false)
+          
+          }} className="h-10 w-10 cursor-pointer rounded-full flex items-center justify-center bg-white text-black">
+<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+</svg>
+</div></div>
+    
 
         {/* form Contianer */}
         <Segment
@@ -97,6 +107,7 @@ const Login = ({ SignIn, is_authenticated, loginError }) => {
             background: "white",
             border: "none",
           }}
+          className="rounded-xl py-4 bg-white border-none"
         >
           <Grid columns={1} stretched>
             <Grid.Column>
@@ -117,12 +128,13 @@ const Login = ({ SignIn, is_authenticated, loginError }) => {
                   onChange={(e) => {
                     setUsername(e.target.value);
                   }}
+                  required
                   placeholder="Username"
                 />
 
                 {/* brand name input */}
                 {/* forget pass */}
-                <div
+                {/* <div
                   style={{
                     position: "absolute",
                     right: 20,
@@ -131,7 +143,7 @@ const Login = ({ SignIn, is_authenticated, loginError }) => {
                   <NavLink to="/auth/password-reset/" exact variant="body2">
                     Forgot password?
                   </NavLink>
-                </div>
+                </div> */}
                 {/* forget pass */}
                 {/* password input */}
 
@@ -148,26 +160,34 @@ const Login = ({ SignIn, is_authenticated, loginError }) => {
                   label="Password"
                   type="password"
                   value={password}
+                    required
                   onChange={(e) => {
                     setPassword(e.target.value);
                   }}
                 />
                 {/* password input */}
                 {loading ? (
-                  <Button loading primary className="col-12">
+                  <Button        style={{background:"#281b11"}} loading className="col-12">
                     Loading
                   </Button>
                 ) : (
                   <Button
                     content="Sign In"
                     size="tiny"
-                    primary
-                    className="col-12"
+              style={{background:"#281b11"}}
+        
+                    className=" primary"
                   />
                 )}
               </Form>
             </Grid.Column>
           </Grid>
+          <div className="flex mt-2"> Dont have an Account Yet , <div onClick={()=>{
+            setRedirect(false)
+            setTimeout(() => {
+              setOpenRegister(true)
+            }, 500);
+          }} className="text-red-400 mx-2 cursor-pointer"><b> Register</b></div></div>
         </Segment>
         {/* /form Contianer */}
 

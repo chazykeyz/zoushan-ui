@@ -7,6 +7,7 @@ import { Hidden } from "@material-ui/core";
 
 // react router dom
 import { NavLink, Redirect } from "react-router-dom";
+import "semantic-ui-css/semantic.min.css";
 
 // REDUX
 import { connect } from "react-redux";
@@ -22,15 +23,14 @@ import "react-toastify/dist/ReactToastify.css";
 
 function Copyright() {
   return (
-    <p>
-      {"Wasafi Media Copyright © "}
+    <p className="secondary">
+      {"Zoushan Cosmetics Copyright © "}
       {new Date().getFullYear()}
       {"."}
     </p>
   );
 }
-
-const Register = ({ Registration, is_authenticated }) => {
+const Register = ({ Registration, is_authenticated, setRedirect, setOpenRegister }) => {
   // HOOKS
   // conditional hooks
   const [emptyIgnore, setEmptyIgnore] = React.useState(false);
@@ -90,7 +90,7 @@ const Register = ({ Registration, is_authenticated }) => {
   };
 
   if (is_authenticated) {
-    return <Redirect to="/" />;
+    return <Redirect to="/checkout" />;
   }
   return (
     <div
@@ -100,9 +100,19 @@ const Register = ({ Registration, is_authenticated }) => {
         paddingTop: 100,
       }}
     >
-      <div className="col-md-3 col-lg-3 pt-5">
+      <div className="col-md-3 col-lg-3 pt-5 ">
+      <div className="flex justify-between">
         <h3>Sign Up </h3>
-
+<div onClick={()=>{
+              setOpenRegister(false)
+          
+          }} className="h-10 w-10 cursor-pointer rounded-full flex items-center justify-center bg-white text-black">
+<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+</svg>
+</div>
+      </div>
+      
         {/* form Contianer */}
         <Segment
           style={{
@@ -138,6 +148,7 @@ const Register = ({ Registration, is_authenticated }) => {
                     iconPosition="left"
                     label="Username"
                     value={username}
+                    required
                     onChange={(e) => {
                       setUsername(e.target.value);
                       if (e.target.value.match(" ")) {
@@ -171,6 +182,7 @@ const Register = ({ Registration, is_authenticated }) => {
                     iconPosition="left"
                     label="Email"
                     type="email"
+                     required
                     value={email}
                     onChange={(e) => {
                       setEmail(e.target.value);
@@ -194,6 +206,7 @@ const Register = ({ Registration, is_authenticated }) => {
                     iconPosition="left"
                     label="Password"
                     type="password"
+                     required
                     placeholder="password"
                     value={password}
                     onChange={(e) => {
@@ -231,6 +244,7 @@ const Register = ({ Registration, is_authenticated }) => {
                   <Form.Input
                     icon="lock"
                     iconPosition="left"
+                     required
                     label="Confirm Password"
                     type="password"
                     value={re_password}
@@ -270,15 +284,18 @@ const Register = ({ Registration, is_authenticated }) => {
                 </Form.Field>
                 {/* /password confirm */}
                 {loading ? (
-                  <Button loading primary className="col-12">
+                  <Button loading   style={{background:"#281b11"}}
+        
+                    className=" primary">
                     Loading
                   </Button>
                 ) : (
                   <Button
                     content="Sign Up"
                     size="tiny"
-                    primary
-                    className="col-12"
+                     style={{background:"#281b11"}}
+        
+                    className=" primary"
                   />
                 )}
               </Form>
@@ -299,17 +316,21 @@ const Register = ({ Registration, is_authenticated }) => {
             <div>Already have an account?</div>
 
             {/* buttons */}
-            <Button className="mx-3" size="tiny">
-              <Button.Content visible>
-                <NavLink to="/auth/login" exact variant="body2">
-                  Sign In
-                </NavLink>
+            <Button   style={{background:"#281b11"}}
+        
+                    className=" primary mx-3" size="tiny" onClick={()=>{
+        
+             setOpenRegister(false)
+            setTimeout(() => {
+                 setRedirect(true)
+            }, 500);
+          }}>
+              <Button.Content visible >
+        
+                 Log In
+                
               </Button.Content>
-              <Button.Content hidden>
-                <NavLink to="/auth/login" exact variant="body2">
-                  <Icon name="arrow left" />
-                </NavLink>
-              </Button.Content>
+        
             </Button>
             {/* /buttons */}
           </div>

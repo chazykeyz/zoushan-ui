@@ -14,7 +14,7 @@ import Register from "./components/auth/register";
 import Logout from "./components/logout";
 import PasswordReset from "./components/auth/resetPassword";
 import PasswordResetConfirm from "./components/auth/resetPasswordConfirm";
-import Login from "./components/auth/login";
+import Admin from "./pages/admin";
 import CheckOutComponet from "./components/checkout/checkout";
 import ThanksComponent from "./components/checkout/thanks";
 
@@ -37,8 +37,6 @@ function App() {
         <Switch>
           {/* auth */}
           <Route path="/logout" exact component={Logout} />
-          <Route path="/auth/register" exact component={Register} />
-          <Route path="/auth/login" exact component={Login} />
           <Route path="/auth/password-reset" exact component={PasswordReset} />
           <Route
             exact
@@ -53,6 +51,7 @@ function App() {
           <Route path="/about" exact component={About} />
           <Route path="/adress" component={CheckOutComponet} />
           <Route path="/ordering-report" exact component={ThanksComponent} />
+           <Route path="/orders" exact component={Admin} />
         </Switch>
       </Router>
     </div>

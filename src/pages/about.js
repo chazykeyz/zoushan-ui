@@ -12,14 +12,47 @@ const About = () => {
         <div align="justify">
           <div>
             <div className="secondary">MEET OUR CEO</div>
-            <div className="tertiary text-3xl font-black">ZOUCHAN</div>
+            <div className="tertiary text-3xl font-black">ZOUSHAN</div>
           </div>
           <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique. Duis cursus, mi quis
-            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
-            vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem
-            imperdiet. Nunc ut sem vitae risus tristique posuere.
+            I grew up in Tanzania, where beauty was influenced by nature and
+            still is till date. My mother is my biggest inspiration. Growing up,
+            I watched her care for her skin using all natural products after her
+            bath, and I couldn’t help but notice the healthy glow in her skin
+            all day long. She’d always say "organic beauty is the best". <br />
+            <br /> In 2016, after I lost my mother, I realized that i had fallen
+            in love with organic skincare as each time I applied her products on
+            my skin, I felt directly connected to her. That feeling inspired my
+            decision to not only create an all natural beauty line but also give
+            back to the community and since then, my biggest dream has been to
+            create a product line that everyone will love regardless of their
+            gender. Being inspired by nature, the healthy beauty of girls and
+            women in Tanzania who only uses locally made skincare products, it
+            became even more obvious to me that true beauty lies in the
+            simplicity. Thus the healthier, the better. <br />
+            <br /> ZOUSHAN cosmetics is a 100% handmade skincare solution made
+            with love and powered by nature. I have always wanted to create
+            something that I will love and my community too. After using my
+            skincare line , i decided to share it’s results with the world.
+            Because of its cruelty free, toxin free ingredients , my skin
+            texture and regimen has improved drastically. The products helped me
+            prevent skin allergies and non desired reactions which led to me
+            having a healthier, softer, smoother, clearer and acne free skin.
+            <br />
+            <br />
+            <b>
+              ZOUSHAN’S COSMETICS DEDICATION TO GIVING BACK TO THE COMMUNITY
+            </b>
+            <br /> My mother died when I was young, so it was a precious thing
+            to have a friend in that generation or younger. My experience gave
+            me a great perspective on things. I felt the struggles of the
+            children in need of a home and parental love. The daily struggles of
+            a young child growing without a parent influenced my lifestyle and
+            my way of thinking. ZOUSHAN cosmetics is the opportunity for me to
+            share the love and support I received from people who cared with
+            those in need today. In that, I decided to donate 10% of the
+            proceeds to the orphanages all over the world to fulfill their basic
+            needs and help support their dreams.
           </div>
         </div>
         <div className="md:pl-8 " style={{ height: 500 }}>
@@ -32,7 +65,7 @@ const About = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 col-span-10 col-start-2 my-10 ">
-        <div className="shd h-80 rounded-3xl flex flex-col items-center justify-center">
+        <div className="shd h-80 rounded-3xl flex flex-col items-center bg-white  p-4  justify-center">
           <div className="font-bold text-3xl secondary">OUR VISION</div>
           <div>
             We are committed to sourcing all natural ingredients to create high
@@ -46,7 +79,7 @@ const About = () => {
             alt=""
           />
         </div>
-        <div className="shd h-80 rounded-3xl flex flex-col items-center p-4 justify-center">
+        <div className="shd h-80 rounded-3xl flex flex-col items-center  bg-white  p-4 justify-center">
           <div className="font-bold text-3xl secondary">OUR MISSION</div>
           <div>
             To restore and lavish skin using nature’s best ingredients and to
@@ -60,7 +93,7 @@ const About = () => {
             alt=""
           />
         </div>
-        <div className="shd h-80 rounded-3xl flex flex-col items-center justify-center p-6">
+        <div className="shd h-80 rounded-3xl flex flex-col items-center justify-center p-6 bg-white ">
           <div className="font-bold text-3xl secondary">WHAT WE BELIEVE IN</div>
           <div>
             We believe in preserving nature and also harnesing its pure cosmetic
