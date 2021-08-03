@@ -50,7 +50,7 @@ const About = () => {
       <div className="col-span-10 col-start-2 flex felx-wrap grid grid-cols-1 mt-10 md:grid-cols-2 items-center">
         <div className="md:pr-8 " style={{ height: 300 }}>
           <img
-            src="https://1.bp.blogspot.com/-EMM1imKQW70/YQaQKLkye7I/AAAAAAAABYg/W0y1y1filA0sYyhBB5AvCDXMptFkJdWHwCLcBGAsYHQ/s16000/ZC-57.jpg"
+            src="https://1.bp.blogspot.com/-CixetRczF_g/YQmmRZLEhyI/AAAAAAAABbQ/TfSAErl8qUUKoJ-gGYQMhMLQQ4FzZ_9dgCLcBGAsYHQ/s16000/WhatsApp%2BImage%2B2021-08-03%2Bat%2B23.17.26.jpeg"
             alt=""
             className="h-full w-full object-cover rounded-xl "
           />
