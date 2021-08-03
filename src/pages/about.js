@@ -40,7 +40,7 @@ const About = () => {
         </div>
         <div className="md:pl-8 " style={{ height: 500 }}>
           <img
-            src="https://1.bp.blogspot.com/-EMM1imKQW70/YQaQKLkye7I/AAAAAAAABYg/W0y1y1filA0sYyhBB5AvCDXMptFkJdWHwCLcBGAsYHQ/s16000/ZC-57.jpg"
+            src="https://1.bp.blogspot.com/-7jLRkgcURcc/YQmXYwVZPZI/AAAAAAAABaQ/bfWgEN1k8zsKaf48kgcL48A4Ku2LvBnYQCLcBGAsYHQ/s16000/2.jpg"
             alt=""
             className="h-full w-full object-cover rounded-xl "
           />
