@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import cart from "../cart.svg";
-import NavBar from "../components/navBar";
 import axios from "axios";
 import { productsAPI, categoriesAPI } from "./../constant";
 
@@ -23,7 +22,6 @@ const Shop = () => {
   }, []);
   return (
     <div className="grid grid-cols-12 pb-20 ">
-      <NavBar home={false} />
       <div className=" col-span-10 col-start-2 flex items-center mt-10  md:items-start flex-col mb-4">
         <div className="text-3xl font-bold tertiary "> SHOP OUR RANGE </div>
         <div
@@ -46,7 +44,7 @@ const Shop = () => {
             </NavLink>
           ))}
         </div>
-        <div className="flex flex-wrap w-full grid md:grid-cols-3 grid-cols-1 lg:grid-cols-5 gap-4">
+        <div className="flex flex-wrap w-full grid md:grid-cols-3 grid-cols-1 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {data.slice(`${(number - 1) * 10}`, `${number * 10}`).map((item) => (
             <div key={item.id}>
               <div className="rounded-xl primaryBg shadow-lg m-2 overflow-hidden">

@@ -17,6 +17,7 @@ import PasswordResetConfirm from "./components/auth/resetPasswordConfirm";
 import Admin from "./pages/admin";
 import CheckOutComponet from "./components/checkout/checkout";
 import ThanksComponent from "./components/checkout/thanks";
+import NavBar from "./components/navBar";
 
 import { connect } from "react-redux";
 import { authCheck, checkAuthenticated } from "./reduxStore/actions/auth";
@@ -33,6 +34,7 @@ function App() {
   return (
     <div className="App ">
       <Router>
+        <NavBar />
         <Switch>
           {/* auth */}
           <Route path="/logout" exact component={Logout} />

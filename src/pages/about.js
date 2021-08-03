@@ -1,60 +1,41 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import Footer from "../components/footer";
-import NavBar from "../components/navBar";
 
 const About = () => {
   return (
     <div className="grid grid-cols-12 ">
-    <NavBar home={false}/>
-      <div className=" col-span-10 col-start-2 flex items-center mt-10  md:items-start flex-col mb-4">
+      <div className=" col-span-10 col-start-2 flex items-center mt-10  md:items-start flex-col mb-4  ">
         <div className="text-3xl font-black tertiary "> ABOUT US</div>
       </div>
-      <div className="col-span-10 col-start-2 flex felx-wrap grid grid-cols-1 md:grid-cols-2 items-center">
+      <div className="col-span-10 col-start-2 flex felx-wrap grid grid-cols-1 md:grid-cols-2 items-center mt-10 ">
         <div align="justify">
           <div>
             <div className="secondary">MEET OUR CEO</div>
             <div className="tertiary text-3xl font-black">ZOUSHAN</div>
           </div>
-          <div>
-            I grew up in Tanzania, where beauty was influenced by nature and
-            still is till date. My mother is my biggest inspiration. Growing up,
-            I watched her care for her skin using all natural products after her
-            bath, and I couldn’t help but notice the healthy glow in her skin
-            all day long. She’d always say "organic beauty is the best". <br />
-            <br /> In 2016, after I lost my mother, I realized that i had fallen
-            in love with organic skincare as each time I applied her products on
-            my skin, I felt directly connected to her. That feeling inspired my
-            decision to not only create an all natural beauty line but also give
-            back to the community and since then, my biggest dream has been to
-            create a product line that everyone will love regardless of their
-            gender. Being inspired by nature, the healthy beauty of girls and
-            women in Tanzania who only uses locally made skincare products, it
-            became even more obvious to me that true beauty lies in the
-            simplicity. Thus the healthier, the better. <br />
+          <div className="my-4">
+            Who is my biggest inspiration? My mother. I was born and raised in
+            Tanzania. A place where nature inspires beauty. At a young age, I
+            would sit and watch my mother apply all-natural products to her skin
+            after coming out of the bath. I could not help noticing how these
+            products helped to keep her skin healthy and rejuvenated. Her skin
+            would glow all day long. She would always say, "organic beauty is
+            the best". <br />
+            <br /> In 2016, I lost my mother. I quickly realized that I had
+            fallen in love with organic skincare. Each time I applied her
+            products to my skin, I felt directly connected to her. Those times
+            became light-bulb moments. What if I could use those same
+            ingredients to create an accessible skin line that would also give
+            back to my local community? ZOUSHAN was born. Since then, my biggest
+            dream has been to create a product line that is all-natural and
+            loved by all. <br />
             <br /> ZOUSHAN cosmetics is a 100% handmade skincare solution made
-            with love and powered by nature. I have always wanted to create
-            something that I will love and my community too. After using my
-            skincare line , i decided to share it’s results with the world.
-            Because of its cruelty free, toxin free ingredients , my skin
-            texture and regimen has improved drastically. The products helped me
-            prevent skin allergies and non desired reactions which led to me
-            having a healthier, softer, smoother, clearer and acne free skin.
-            <br />
-            <br />
-            <b>
-              ZOUSHAN’S COSMETICS DEDICATION TO GIVING BACK TO THE COMMUNITY
-            </b>
-            <br /> My mother died when I was young, so it was a precious thing
-            to have a friend in that generation or younger. My experience gave
-            me a great perspective on things. I felt the struggles of the
-            children in need of a home and parental love. The daily struggles of
-            a young child growing without a parent influenced my lifestyle and
-            my way of thinking. ZOUSHAN cosmetics is the opportunity for me to
-            share the love and support I received from people who cared with
-            those in need today. In that, I decided to donate 10% of the
-            proceeds to the orphanages all over the world to fulfill their basic
-            needs and help support their dreams.
+            with love and powered by nature. Organic, ethically sourced, and
+            locally made, I am proud to say that I have created a brand that I
+            love that serves my community. After testing my products on myself,
+            I decided to share the results with the world. I noticed a drastic
+            improvement in the texture and tone of my skin and its overall
+            health. GIVING BACK.
           </div>
         </div>
         <div className="md:pl-8 " style={{ height: 500 }}>
@@ -66,7 +47,29 @@ const About = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 col-span-10 col-start-2 my-10 ">
+      <div className="col-span-10 col-start-2 flex felx-wrap grid grid-cols-1 mt-10 md:grid-cols-2 items-center">
+        <div className="md:pr-8 " style={{ height: 300 }}>
+          <img
+            src="https://1.bp.blogspot.com/-EMM1imKQW70/YQaQKLkye7I/AAAAAAAABYg/W0y1y1filA0sYyhBB5AvCDXMptFkJdWHwCLcBGAsYHQ/s16000/ZC-57.jpg"
+            alt=""
+            className="h-full w-full object-cover rounded-xl "
+          />
+        </div>
+        <div align="justify" className="my-4">
+          <div>
+            Losing my mother gave me a different perspective on everything. More
+            so, it shed light for me on the struggles of the children in need of
+            a home and parental love. The daily struggles of a young child
+            growing without a parent influenced my lifestyle and my way of
+            thinking. ZOUSHAN cosmetics is the opportunity for me to share the
+            same love and support I received during my time of need. With that
+            in mind, I decided that 10% of ZOUSHAN proceeds would be distributed
+            to orphanages around the world to fulfill their basic need
+          </div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 col-span-10 col-start-2 my-10  ">
         <div className="shd h-80 rounded-3xl flex flex-col items-center bg-white  p-4  justify-center">
           <div className="font-bold text-3xl secondary">OUR VISION</div>
           <div>
@@ -109,6 +112,29 @@ const About = () => {
           <img
             className="h-full w-full object-cover"
             src="https://1.bp.blogspot.com/-zH0F8wBVXpI/YQaWFtBTC6I/AAAAAAAABZY/iuIRA-4yr-YHZK_qM1PNdINV-C79M4QagCLcBGAsYHQ/s16000/ZC-67.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 col-span-10 col-start-2 my-10 ">
+        <div className="shd  rounded-3xl flex flex-col items-center justify-center overflow-hidden">
+          <img
+            className="h-full w-full object-cover"
+            src="https://1.bp.blogspot.com/-X4Ne0YmT92w/YQmNMY7MSfI/AAAAAAAABaI/UMdCS5xu5XY6cDHfQe5ELOnlvjapBpRCgCLcBGAsYHQ/s16000/118286432_3641080845915509_8045923437941469160_n.jpg"
+            alt=""
+          />
+        </div>
+        <div className="shd h-80 rounded-3xl flex flex-col items-center justify-center p-6 bg-white ">
+          <div className="font-bold text-3xl secondary">OUR COMMUNITY</div>
+          <div>
+            Our Community partners during different process of product
+            production
+          </div>
+        </div>
+        <div className="shd  rounded-3xl flex flex-col items-center justify-center overflow-hidden">
+          <img
+            className="h-full w-full object-cover"
+            src="https://1.bp.blogspot.com/-LSqr9C7yYU8/YQmM1dtxNQI/AAAAAAAABaA/-xfOB1FaS08Bf60ClwmhBWBf0AQz3kKGQCLcBGAsYHQ/s16000/194323887_804577640431432_4341792035358261076_n.jpg"
             alt=""
           />
         </div>

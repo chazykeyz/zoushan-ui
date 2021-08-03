@@ -48,9 +48,9 @@ const Adress = ({ Ordered, adressSuccess, final, cartItems }) => {
   }
 
   return (
-    <div className="w-full p-4 ">
+    <div className="w-full p-4 col-12">
       {final ? (
-        <div className="flex flex-col col-md-5  items-center mt-10">
+        <div className="flex flex-col col-md-12  items-center mt-10">
           <div className="text-3xl tertiary">Adress</div>
           <form onSubmit={handleSubmit} className="flex flex-col w-full">
             <input

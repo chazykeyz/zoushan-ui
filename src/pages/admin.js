@@ -2,23 +2,12 @@ import React, { useState, useEffect } from "react";
 
 import Backdrop from "@material-ui/core/Backdrop";
 import { makeStyles } from "@material-ui/core/styles";
-import { Avatar } from "@material-ui/core";
 
 // icons
 import { AiOutlineClose } from "react-icons/ai";
-import { IoIosMale } from "react-icons/io";
-import { IoFemale } from "react-icons/io5";
-import { GiPayMoney } from "react-icons/gi";
-import { BsEyeFill } from "react-icons/bs";
-import { MdWork } from "react-icons/md";
 import { BiDollar } from "react-icons/bi";
-import { AiFillDelete } from "react-icons/ai";
-import { RiSearchLine } from "react-icons/ri";
 import axios from "axios";
 import { OrderReadAPI } from "./../constant";
-import NavBar from "../components/navBar";
-
-import { NavLink } from "react-router-dom";
 
 // material ui stying
 const useStyles = makeStyles((theme) => ({

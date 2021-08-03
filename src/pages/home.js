@@ -6,7 +6,7 @@ import "./../../node_modules/slick-carousel/slick/slick-theme.css";
 import { NavLink } from "react-router-dom";
 import "../App.css";
 import ProductSlide from "../components/productSlide";
-import TestimonySlide from "../components/testimony";
+// import TestimonySlide from "../components/testimony";
 
 import rabbit from "../rabbit.svg";
 import recycle from "../recycle.svg";
@@ -17,7 +17,6 @@ import About from "../components/about";
 import axios from "axios";
 import { slideAPI, productsAPI } from "./../constant";
 import Footer from "../components/footer";
-import NavBar from "../components/navBar";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -57,12 +56,11 @@ const Home = () => {
   };
   return (
     <div>
-      <NavBar home={true} />
       <div>
         <Slider {...settings}>
           {data.map((item) => (
-            <div className="relative" key={item.id}>
-              <div className="w-screen h-screen">
+            <div className="relative " key={item.id}>
+              <div className="w-screen " style={{ height: "90vh" }}>
                 <img
                   src={item.thumbnail}
                   alt=""
@@ -70,7 +68,7 @@ const Home = () => {
                 />
               </div>
               <div className="h-full w-full grid grid-cols-12 absolute left-0  top-0">
-                <div className="col-span-5 0 flex flex-col items-center justify-center">
+                <div className="col-span-12 flex flex-col items-center justify-end mb-20">
                   <div
                     className="
                   primary"
@@ -91,13 +89,13 @@ const Home = () => {
           ))}
         </Slider>
       </div>
-      <div className="py-10 ">
+      <div className="py-10 " style={{ zIndex: 0 }}>
         <ProductSlide data={product} />
       </div>
-
       <div className="primaryBgb py-8">
         <About />
       </div>
+
       <div className="grid grid-cols-12 my-10">
         <div className=" col-span-12 flex  items-center flex-col mb-4">
           <div className="text-xl"> OUR CORE VALUES</div>
