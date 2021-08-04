@@ -17,7 +17,7 @@ const ProductSlide = ({ data, cartItems, addToCart, name }) => {
     speed: 500,
     dots: false,
     autoplaySpeed: 3000,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
